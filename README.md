@@ -138,3 +138,68 @@ Souvik
 * Importance of preprocessing
 * Building end-to-end AI systems
 * Model evaluation and comparison
+
+
+-----------------------------------------------------------------------------------
+
+
+Student Depression Prediction (End-to-End ML Project)
+
+Overview:
+This project predicts the likelihood of student depression using a Deep Learning model built with PyTorch. It includes the complete ML pipeline—from preprocessing to deployment using Streamlit.
+
+Features:
+- Data preprocessing & feature engineering
+- Neural network model (PyTorch)
+- Model training (~80% accuracy)
+- Feature alignment for inference
+- Streamlit web app
+- Probability-based output
+
+Tech Stack:
+Python, Pandas, NumPy, Scikit-learn, PyTorch, Streamlit
+
+Project Structure:
+- app.py
+- model.pth
+- feature_columns.pkl
+- requirements.txt
+- src/
+  - data/
+  - model/
+  - train/
+- data/raw/
+- notebooks/
+
+How It Works:
+1. Data Pipeline – load & preprocess
+2. Model Training – neural network (Sigmoid + BCELoss)
+3. Feature Alignment – ensures correct input shape
+
+Run:
+pip install -r requirements.txt
+python -m src.train.train
+python -m streamlit run app.py
+
+Sample Output:
+- Low Risk (78%)
+- High Risk (69%)
+
+Key Learnings:
+- Feature mismatch handling
+- End-to-end ML pipeline
+- Deployment using Streamlit
+
+Limitations:
+- DL not optimal for tabular data
+- Dataset dependent
+- Not a medical tool
+
+Future Improvements:
+- Add Random Forest
+- Improve accuracy
+- Deploy online
+
+Author:
+Souvik Paul
+
