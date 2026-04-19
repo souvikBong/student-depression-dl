@@ -4,7 +4,9 @@ from sklearn.preprocessing import StandardScaler
 
 # 1. Drop unnecessary columns
 def clean_data(df):
-    df = df.drop(columns=['id', 'City', 'Profession', 'Degree'])
+    #df = df.drop(columns=['id', 'City', 'Profession', 'Degree'])
+    df = df.drop(columns=['id', 'City', 'Profession', 'Degree'], errors='ignore')
+
     return df
 
 
